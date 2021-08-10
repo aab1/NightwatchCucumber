@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "chromedriver": "^90.0.0",
+    "chromedriver": "^92.0.0",
     "cucumber": "^6.0.5",
     "cucumber-html-reporter": "^5.1.0",
     "cucumber-pretty": "^6.0.0",
