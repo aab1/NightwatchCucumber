@@ -1,20 +1,20 @@
 [
   {
     "keyword": "Feature",
-    "name": "Google Search",
+    "name": "Search Item on home depot",
     "line": 1,
-    "id": "google-search",
+    "id": "search-item-on-home-depot",
     "tags": [],
-    "uri": "features\\google.feature",
+    "uri": "features\\HomePage.feature",
     "elements": [
       {
-        "id": "google-search;searching-google",
+        "id": "search-item-on-home-depot;searching-item-on-home-page",
         "keyword": "Scenario",
         "line": 4,
-        "name": "Searching Google",
+        "name": "Searching Item on home page",
         "tags": [
           {
-            "name": "@test",
+            "name": "@test1",
             "line": 3
           }
         ],
@@ -24,39 +24,50 @@
             "arguments": [],
             "keyword": "Given ",
             "line": 6,
-            "name": "I open Google's search page",
+            "name": "I navigate to home depot website",
             "match": {
-              "location": "step-definitions\\google.js:4"
+              "location": "step-definitions\\HomePageSteps.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 2303000000
+              "duration": 5310000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I search \"Bulb\"",
+            "match": {
+              "location": "step-definitions\\HomePageSteps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4006000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 7,
-            "name": "the title is \"Google\"",
+            "line": 8,
+            "name": "search result is displayed",
             "match": {
-              "location": "step-definitions\\google.js:8"
+              "location": "step-definitions\\HomePageSteps.js:15"
             },
             "result": {
               "status": "passed",
-              "duration": 31000000
+              "duration": 2008000000
             }
           },
           {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 8,
-            "name": "the Google search form exists",
+            "keyword": "After",
+            "hidden": true,
             "match": {
-              "location": "step-definitions\\google.js:12"
+              "location": "cucumber.conf.js:39"
             },
             "result": {
               "status": "passed",
-              "duration": 51000000
+              "duration": 0
             }
           },
           {
@@ -67,7 +78,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 402000000
             }
           }
         ]

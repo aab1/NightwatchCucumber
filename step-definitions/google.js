@@ -13,23 +13,3 @@ Then(/^the Google search form exists$/, () => {
   return client.assert.visible('input[name="q"]');
 });
 
-
-
-// Given('I open Google\'s search page', function () {
-// // Write code here that turns the phrase above into concrete actions
-// return 'pending';
-// });
-
-
-
-// Then('the title is {string}', function (string) {
-// // Write code here that turns the phrase above into concrete actions
-// return 'pending';
-// });
-
-
-
-// Then('the Google search form exists', function () {
-// // Write code here that turns the phrase above into concrete actions
-// return 'pending';
-// });

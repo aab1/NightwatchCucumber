@@ -1,0 +1,9 @@
+
+=======tags============
+npm run e2e-test -- --tags @google
+
+============multiple tags==============
+npm run e2e-test -- --tags "@google or @duckduckgo"
+npm run e2e-test -- --tags "(@google or @duckduckgo) and @search"
+
+use the bash file by runing: ./run.bat

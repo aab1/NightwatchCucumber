@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { setDefaultTimeout, After, AfterAll, BeforeAll } = require('cucumber');
-const { createSession, closeSession, startWebDriver, stopWebDriver, getNewScreenshots } = require('nightwatch-api');
+const { createSession, closeSession, startWebDriver, stopWebDriver, getNewScreenshots, client } = require('nightwatch-api');
 const reporter = require('cucumber-html-reporter');
 
 setDefaultTimeout(60000);
@@ -13,8 +13,8 @@ BeforeAll(async () => {
 });
 
 AfterAll(async () => {
-  await closeSession();
-  await stopWebDriver();
+  // await closeSession();
+  // await stopWebDriver();
   setTimeout(() => {
     reporter.generate({
       theme: 'bootstrap',
@@ -28,8 +28,13 @@ AfterAll(async () => {
       }
     });
   }, 1000);
+  await stopWebDriver();
 });
 
+After(async () => {
+  await client.deleteCookies();
+  await client.end();
+});
 
 After(function() {
   getNewScreenshots().forEach(file => this.attach(fs.readFileSync(file), 'image/png'));
